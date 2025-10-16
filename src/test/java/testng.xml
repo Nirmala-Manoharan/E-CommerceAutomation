@@ -1,0 +1,11 @@
+<suite name = "Suite1">
+    <listeners>
+        <listener class-name = "com.nirmala.automation.Utils.TestListener"/>
+    </listeners>
+    <test name = "Registration">
+        <parameter name = "Browser" value = "firefox"/>
+        <classes>
+            <class name = "com.nirmala.automation.Test.SignUp"/>
+        </classes>
+    </test>
+</suite>
