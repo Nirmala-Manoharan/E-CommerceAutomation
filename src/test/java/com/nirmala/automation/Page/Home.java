@@ -1,6 +1,7 @@
 package com.nirmala.automation.Page;
 
 import com.nirmala.automation.Base.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,7 +17,7 @@ public class Home extends BasePage {
     @FindBy(xpath = "//a[contains(text(), 'Logout')]")
     private WebElement logOut;
 
-    @FindBy(xpath = "//a[contains(text(), 'Delete Account']")
+    @FindBy(xpath = "//a[contains(text(), 'Delete Account')]")
     private WebElement deleteAccount;
 
     public Home(WebDriver driver){
@@ -42,5 +43,17 @@ public class Home extends BasePage {
 
     public void waitForHomePageToLoad(){
         waitForPageToLoad();
+    }
+
+    public void openNewTab(){
+        openNewWindowOrTab("TAB");
+    }
+
+    public void openNewWindow(){
+        openNewWindowOrTab("WINDOW");
+    }
+
+    public boolean isUserLoggedOut(){
+        return isElementInvisible(By.xpath("//a[contains(text(), 'Logged in as')]"));
     }
 }

@@ -5,7 +5,7 @@
     <test name = "Registration">
         <parameter name = "Browser" value = "firefox"/>
         <classes>
-            <class name = "com.nirmala.automation.Test.SignUp"/>
+            <class name = "com.nirmala.automation.Test.Login"/>
         </classes>
     </test>
 </suite>
